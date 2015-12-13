@@ -7,6 +7,7 @@ function NewQuestionsController($reactive, $scope) {
   $reactive(vm).attach($scope);
 
   vm.saveQuestion = saveQuestion;
+  initQuestion();
 
   vm.helpers({
     
@@ -15,7 +16,8 @@ function NewQuestionsController($reactive, $scope) {
   function initQuestion() {
     vm.question = {
       object: '',
-      where: ''
+      where: '',
+      answers: []
     };
   }
 

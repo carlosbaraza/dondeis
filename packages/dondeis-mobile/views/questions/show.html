@@ -27,9 +27,18 @@
        </div>
 
        <label class="item item-input item-floating-label">
-          <span class="input-label">Your answer</span>
-         <textarea placeholder="Your answer"></textarea>
+         <span class="input-label">Your answer</span>
+         <textarea placeholder="Your answer"
+                   ng-model="vm.newAnswer.body">
+         </textarea>
        </label>
+
+       <div class="padding">
+         <button class="button button-balanced button-block button-outline"
+                 ng-click="vm.saveAnswer()">
+           Submit answer
+         </button>
+       </div>
     </div>
   </ion-content>
 </ion-view>

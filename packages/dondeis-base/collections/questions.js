@@ -1,11 +1,20 @@
 Questions = new Meteor.Collection('questions');
 
+Schemas.Answer = new SimpleSchema({
+  body: {
+    type: String
+  }
+})
+
 Schemas.Questions = new SimpleSchema({
   object: {
     type: String
   },
   where: {
     type: String
+  },
+  answers: {
+    type: [Schemas.Answer]
   },
   createdAt: SchemaHelpers.createdAt,
   updatedAt: SchemaHelpers.updatedAt
