@@ -11,9 +11,12 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
+  var where = 'web.cordova';
+
   api.versionsFrom('1.2.1');
-  api.use('driftyco:ionic', 'web.cordova');
+  api.use('driftyco:ionic', where);
   api.use('angular@1.3.0');
+  api.use('dondeis-base', where);
 
   /****************************************************************************/
   // Angular Logic
@@ -22,16 +25,16 @@ Package.onUse(function(api) {
   api.addFiles([
     'lib/app.js',
     'lib/routes.js'
-  ], 'web.cordova');
+  ], where);
 
   // Controllers
   api.addFiles([
     'controllers/questions/list.js',
     'controllers/questions/new.js'
-  ], 'web.cordova');
+  ], where);
 
   // Layout
-  api.addFiles(['views/index.html'], 'web.cordova');
+  api.addFiles(['views/index.html'], where);
 
   /****************************************************************************/
   // Templates
@@ -40,7 +43,7 @@ Package.onUse(function(api) {
     'views/home.html',
     'views/questions/list.html',
     'views/questions/new.html'
-  ], 'web.cordova');
+  ], where);
 });
 
 Package.onTest(function(api) {

@@ -4,14 +4,19 @@
     <form class="list">
       <label class="item item-input item-floating-label">
         <span class="input-label">What are you looking for?</span>
-        <input type="text" placeholder="What are you looking for?">
+        <input type="text" placeholder="What are you looking for?"
+               ng-model="vm.question.object">
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Where?</span>
-        <input type="text" placeholder="Where?">
+        <input type="text" placeholder="Where?"
+               ng-model="vm.question.where">
       </label>
       <div class="padding">
-        <button class="button button-balanced button-block">Ask the city!</button>
+        <button class="button button-balanced button-block"
+                ng-click="vm.saveQuestion()">
+          Ask the city!
+        </button>
       </div>
     </form>
   </ion-content>
