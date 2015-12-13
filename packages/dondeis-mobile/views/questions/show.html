@@ -1,0 +1,36 @@
+<ion-view title="{{vm.question.object}}">
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content>
+    <div class="list">
+       <div class="item item-divider">
+         Details
+       </div>
+       <div class="item">
+         <h2>Looking for:</h2>         
+         <p>{{vm.question.object}}</p>
+       </div>
+       <div class="item">
+         <h2>Where:</h2>         
+         <p>{{vm.question.where}}</p>
+       </div>
+
+       <div class="item item-divider">
+         Answers 
+       </div>
+
+       <div class="item" ng-repeat="answer in vm.question.answers">
+         {{answer.body}}
+       </div>
+
+       <label class="item item-input item-floating-label">
+          <span class="input-label">Your answer</span>
+         <textarea placeholder="Your answer"></textarea>
+       </label>
+    </div>
+  </ion-content>
+</ion-view>
+

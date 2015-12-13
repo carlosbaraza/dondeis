@@ -29,5 +29,10 @@ function Routes($stateProvider, $urlRouterProvider) {
       }
     }
   })
+  .state('show-question', {
+    url: '/questions/:id',
+    templateUrl: '/packages/dondeis-mobile/views/questions/show.html',
+    controller: 'ShowQuestionsController as vm'
+  })
 
 }

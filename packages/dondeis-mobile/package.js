@@ -30,7 +30,8 @@ Package.onUse(function(api) {
   // Controllers
   api.addFiles([
     'controllers/questions/list.js',
-    'controllers/questions/new.js'
+    'controllers/questions/new.js',
+    'controllers/questions/show.js'
   ], where);
 
   // Layout
@@ -42,7 +43,8 @@ Package.onUse(function(api) {
   api.addFiles([
     'views/home.html',
     'views/questions/list.html',
-    'views/questions/new.html'
+    'views/questions/new.html',
+    'views/questions/show.html'
   ], where);
 });
 

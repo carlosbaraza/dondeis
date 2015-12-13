@@ -1,5 +1,5 @@
-<ion-view title="People are looking for...">
-  <ion-content padding="'false'" class="has-header">
+<ion-view view-title="Search"> 
+  <ion-content class="has-header">
 
     <ion-list>
       <label class="item item-input" name="Search">
@@ -7,9 +7,13 @@
         <input type="search" placeholder="Search">
       </label>
 
-      <ion-item ng-repeat="question in vm.questions" menu-close="" class="item">
+      <ion-item ng-repeat="question in vm.questions" menu-close=""
+                class="item item-icon-right"
+                nav-transition="ios"
+                ng-click="vm.goToQuestion(question)">
         <h2>{{question.object}}</h2>
         <p>{{question.where}}</p>
+        <i class="icon ion-ios-arrow-right"></i>
       </ion-item>
     </ion-list>
 
